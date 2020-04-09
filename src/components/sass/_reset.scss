@@ -1,0 +1,318 @@
+// Based on Bootstrap and normalize
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 1. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+// 2. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so
+//    we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+// 3. Change the default tap highlight to be completely transparent in iOS.
+html {
+  -webkit-text-size-adjust: 100%; // 1
+  -ms-text-size-adjust: 100%; // 1
+  -ms-overflow-style: scrollbar; // 2
+  -webkit-tap-highlight-color: rgba(0,0,0,0); // 3
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+code,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+// fallback for IE10, older browsers
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+time {
+  display: inline;
+}
+
+// 1. Correct the text wrapping in Edge and IE.
+// 2. Correct the color inheritance from `fieldset` elements in IE.
+legend {
+  display: block;
+  max-width: 100%;
+  color: inherit;
+  white-space: normal;
+}
+
+// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+progress {
+  vertical-align: baseline; 
+}
+
+label {
+  display: inline-block;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  color: inherit;
+}
+
+fieldset {
+  min-width: 0;
+}
+
+blockquote {
+  quotes: none;
+  
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+img,
+svg {
+  vertical-align: top;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+// Remove the border on images inside links in IE 10-.
+img {
+  border: 0; 
+}
+
+// Hide the overflow in IE
+svg:not(:root) {
+  overflow: hidden; 
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace;
+  font-size: 1em; // Correct the odd `em` font sizing in all browsers.
+}
+
+pre {
+  // Don't allow content to break outside
+  overflow: auto;
+  // We have @viewport set which causes scrollbars to overlap content in IE11 and Edge, so
+  // we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+  -ms-overflow-style: scrollbar;
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari.
+strong {
+  font-weight: bolder;
+}
+
+// Add the correct font size in all browsers.
+small {
+  font-size: 80%;
+}
+
+// Prevent `sub` and `sup` elements from affecting the line height in
+// all browsers.
+
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+
+sub { 
+  bottom: -.25em; 
+}
+
+sup { 
+  top: -.5em; 
+}
+
+input,
+button,
+select,
+textarea,
+optgroup {
+  margin: 0; // Remove the margin in Firefox and Safari
+  font: inherit;
+  color: inherit;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+}
+input,
+button,
+select {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+input,
+button {
+  overflow: visible; // Show the overflow in Edge
+}
+
+// 1. Remove the default vertical scrollbar in IE.
+// 2. Textareas should really only resize vertically so they don't break their (horizontal) containers.
+textarea {
+  overflow: auto; // 1
+  resize: vertical; // 2
+}
+
+// Remove the inheritance of text transform in Firefox
+button,
+select {
+  text-transform: none; 
+}
+
+select {
+  max-width: 100%;
+  
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+}
+
+// 1. Remove the gray background on active links in IE 10.
+// 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent; // 1
+  -webkit-text-decoration-skip: objects; // 2
+}
+
+// Prevent outline when focusing
+a:focus,
+img:focus,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+// Correct the inability to style clickable types in iOS and Safari.
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+// Remove the padding in IE 10-
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 0; 
+  vertical-align: bottom;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  // Remove the default appearance of temporal inputs to avoid a Mobile Safari
+  // bug where setting a custom line-height prevents text from being vertically
+  // centered within the input.
+  // See https://bugs.webkit.org/show_bug.cgi?id=139848
+  // and https://github.com/twbs/bootstrap/issues/11266
+  -webkit-appearance: listbox;
+}
+
+input[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+// Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
+::-webkit-file-upload-button {
+  font: inherit; // 2
+  -webkit-appearance: button; // 1
+}
